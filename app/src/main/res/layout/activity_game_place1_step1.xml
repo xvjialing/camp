@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rela_game_step1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ActivityGame_place1_step1">
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.amap.api.maps2d.MapView>
+
+    <!--倒计时-->
+    <TextView
+        android:id="@+id/tv_cutTime2"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="00：15"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        android:background="@drawable/login_input_bg" />
+
+
+    <ImageView
+        android:id="@+id/game_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/bg_gameback_selector" />
+
+    <ImageView
+        android:id="@+id/img_help"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/shout" />
+
+    <ImageView
+        android:id="@+id/GameBagImg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/game_bag_selector"
+        android:layout_below="@id/game_back"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp" />
+
+    <ImageView
+        android:id="@+id/GameTaskImg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/game_task_selector"
+        android:layout_below="@id/GameBagImg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/GameShopImg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/game_shop_selector"
+        android:layout_below="@id/GameTaskImg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/place1_step1_Btn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/qr_code_icon"
+        android:layout_gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="130dp" />
+
+    <ImageView
+        android:id="@+id/smallmapAvater"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="223dp"
+        android:layout_marginLeft="373dp"
+        android:src="@drawable/map_avater" />
+
+</RelativeLayout>

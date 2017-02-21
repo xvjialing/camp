@@ -1,0 +1,151 @@
+<resources>
+    <string name="app_name">E站到赢</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--游戏背景-->
+    <string name="gameBackground">\t\t\t\t\t\t\t\t东汉末年,曹操率大军南下,欲夺取江南东吴。
+        但在长江赤壁一带被孙权、刘备联军打败。
+        赤壁之战的失利使曹操失去了在短时间内统一全国的可能性，
+        而孙刘双方则借此胜役开始发展壮大各自势力，
+        曹操在退回北方后，休养生息,
+        此战形成天下三分的雏型，奠定三国鼎立的基础。</string>
+
+    <string name="gameBackground1">\t\t\t\t\t\t东汉末年,曹操率大军南下,欲夺取江南东吴。
+        但在长江赤壁一带被孙权、刘备联军打败。
+        赤壁之战的失利使曹操失去了在短时间内统一全国的可能性，
+        而孙刘双方则借此胜役开始发展壮大各自势力，
+        曹操在退回北方后，休养生息,
+        此战形成天下三分的雏型，奠定三国鼎立的基础。</string>
+
+
+    <!-- 游戏介绍 -->
+    <string name="explainString1">诸葛亮：我生病了，不过我已经把战争策略精囊置于山林的某处，望几位将领共同寻找。</string>
+    <string name="explainString2">好的，我马上就带领兄弟们前去寻找。</string>
+    <string name="explainString3"></string>
+    <string name="explainString4"></string>
+    <string name="explainString5"></string>
+
+    <!-- 地图1地点1对话 -->
+    <string name="place1_string1">抵抗军：科学探险家得知小人族得到精灵指导，快去追随小人族吧！
+        这些小人族企图阻止这股神秘魔法！智能锦囊等着你！</string>
+    <string name="place1_string2">启示军：小人族得到精灵启示必须拿到智能锦囊，开启智能之行。在这个偌大的林子中，
+        虽然没有欺负小人族的魔兽，但是小人族将会迷失在林中，守护小人族的精灵告诉小人族需要换区方向药水！
+        快去与小人族同行找到智能锦囊吧！</string>
+    <string name="place1_string3">此次寻找魔力冒险之旅的你与小人族同在，请骑行通过地图前3个路线地点，
+        剩余一个路线地点将不会在地图上显示，请先骑到第3个地点为小人族找寻方向！换取方向药水！时间限制为2小时！</string>
+
+    <!-- 地点2对话 -->
+    <string name="place2_string1">启示军：精灵告诉小人族敌方将会随时出现或超越小人族，让小人族赶紧找到森林迷宫吧！
+        快为小人族开启下一扇线索门吧！</string>
+    <string name="place2_string2">抵抗军：时间在赛跑，科学探险家感觉到这股魔力之源开始猖獗，快为他寻找魔力之源吧！</string>
+    <string name="place2_string3">请到达地图标注指定地点，团队成员选择自己相应的棋盘角色，根据给出的棋迷，
+        在给出的棋盘界面中站出棋阵，寻找策略精囊（下一关通关卡）吧！时间限制为1小时！</string>
+
+    <!-- 地点3对话 -->
+    <string name="place3_string1">启示军：又见面啦！你们又通过了一关，更多的冒险在后面，小人族能不能通过就看你了！你是启示军的骄傲！</string>
+    <string name="place3_string2">抵抗军：胜利就在前方，你是拥有超常人智慧的科学探险家，去吧！魔力作恶，一刻都不能等待！</string>
+
+
+    <!--地点4对话-->
+    <string name="place4_string1">启示军：精灵告诉小人族魔力之源已与他不远，小人族很激动。殊不知还有冒险等着他！
+        快与小人族一同去冲破冒险吧！</string>
+    <string name="place4_string2">抵抗军：小人族的力量不可小觑，你们将离胜利不远，能否阻止魔力就看你了！</string>
+
+
+    <!-- 组队 -->
+    <string name="teamNumber">等待匹配中，游戏总人数5人，已有4人</string>
+    <string name="teamNumberCompelete">匹配完成，游戏总人数5人，已有5人</string>
+    <!--露营地点游戏介绍-->
+    <string name="place1_game_translate">\t\t\t\t\t科学探险家偶然发现某种神秘魔法。这一魔法来自森林迷宫，且用途无人知晓，
+        但他们认为它会改变人类身体机制，使人类秩序发生混乱。在森林中生活着一群小人族，他们都拥有使身体变小的能量，
+        但其也因为这股能量而无法正常生活，走投无路的他们想用这种神秘魔法使自己过回正常人的生活。
+        他们在想在科学探险家消灭这种神秘魔法前前往魔法之地。于是双方都为了各自的生存展开了一场激烈的较量。</string>
+    <string name="invite_friend_word">系统根据您的团队成员的相关能力为您推荐以上好友</string>
+    <string name="qrcode_tip">将二维码/条码放入框内，即可自动扫描</string>
+    <string name="add_equipment">点击按钮，录入已有装备</string>
+    <string name="baseInfomation">基本信息</string>
+    <string name="mingcheng">名称</string>
+    <string name="introduction">简介</string>
+    <string name="adrress">地点</string>
+    <string name="add_pic">添加图片</string>
+    <string name="others">其他</string>
+    <string name="onepeace">路飞的海贼王</string>
+    <string name="lv_1">LV. 1</string>
+    <string name="join_in">加入</string>
+    <string name="menber">成员:</string>
+    <string name="menber_come">20/25</string>
+    <string name="contribution">贡献:</string>
+    <string name="contribution_number">85</string>
+    <string name="triberank">部落等级:</string>
+    <string name="triberanknumber">3</string>
+    <string name="gameinvite">游戏邀请</string>
+    <string name="battle_chibi">赤壁之战</string>
+    <string name="battle_number">8/10</string>
+    <string name="sign_up">报名</string>
+    <string name="trible_menber">部落成员</string>
+    <string name="little_xv">小徐</string>
+    <string name="little_ming">小明</string>
+    <string name="little_zhang">小张</string>
+    <string name="litttle_li">小李</string>
+    <string name="little_li">小李</string>
+    <string name="littlehong">小红</string>
+    <string name="littlezhao">小赵</string>
+    <string name="little_qian">小钱</string>
+    <string name="little_sun">小孙</string>
+    <string name="zhuGeLiang">诸葛亮</string>
+    <string name="live_adrress">住址</string>
+    <string name="zhejianghangzhou">浙江杭州</string>
+    <string name="sex">性别</string>
+    <string name="male">男</string>
+    <string name="age">年龄</string>
+    <string name="age_number">21</string>
+    <string name="birthday">生日</string>
+    <string name="personal_introduction">个人\n说明</string>
+    <string name="register">注册</string>
+    <string name="loginreward">登录奖励</string>
+    <string name="qiuJiu">求救</string>
+    <string name="mall">商店</string>
+    <string name="teamReady">组队准备</string>
+    <string name="neededProp">所需道具</string>
+    <string name="helpForTime">请求好友赠送时间药水</string>
+    <string name="userInfo">用户信息</string>
+    <string name="medicament">药剂</string>
+    <string name="goods">商品</string>
+    <string name="back">返回</string>
+    <string name="recommendGame">推荐游戏</string>
+    <string name="friend">好友</string>
+    <string name="setting">设置</string>
+    <string name="searchFriend">搜索好友</string>
+    <string name="changeName">改名换姓</string>
+    <string name="needToChangeNmae">需要更改用户名</string>
+    <string name="clickToChangeName">请点击【改名换姓】</string>
+    <string name="versionUpdate">版本更新</string>
+    <string name="recentVersion">当前版本：1.1.0</string>
+    <string name="alreadyNewestVersion">已经是最新版本</string>
+    <string name="microblogBinlding">微博绑定</string>
+    <string name="notMicroblogBilding">尚未绑定微博</string>
+    <string name="customerCenter">客服中心</string>
+    <string name="peleaseClickCustomerCenter">请点击【客服中心】</string>
+    <string name="task">任务</string>
+    <string name="searchGame">搜索游戏</string>
+    <string name="bag">背包</string>
+    <string name="account">账号</string>
+    <string name="congratulation">恭喜</string>
+    <string name="backToMap">返回地图</string>
+    <string name="mybag">我的背包</string>
+    <string name="key">钥匙</string>
+    <string name="eGame">E站游戏</string>
+    <string name="invite_friend">邀请好友</string>
+    <string name="zhugewolong">诸葛卧龙</string>
+    <string name="zhugewolong_lv">诸葛卧龙 LV 21</string>
+    <string name="ranklist">排行榜</string>
+    <string name="home_address">住址</string>
+    <string name="gameshare">游戏分享</string>
+    <string name="jilongshan_introduce">纪龙山位于浙江省桐庐县瑶琳镇（瑶琳仙境附近），\n紧邻赋石水库，依山傍水、美不盛收。</string>
+    <string name="power">体力</string>
+    <string name="brain">智力</string>
+    <string name="cooperation">合作</string>
+
+</resources>

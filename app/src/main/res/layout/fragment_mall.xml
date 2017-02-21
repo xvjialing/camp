@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp"
+    tools:context=".ui.fragment.FragmentMall">
+
+    <RadioGroup
+        android:id="@+id/MallRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/means_bg"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/btn_Mall_goods"
+            style="@style/means_button"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/goods"
+            android:textColor="#ffd407"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/btn_mall_bag"
+            style="@style/means_button"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/mybag"
+            android:textColor="#ffd407"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/mall_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+</LinearLayout>

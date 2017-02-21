@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/rela_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/totalbg"
+    android:orientation="vertical"
+    tools:context=".ui.activity.ActivityMain">
+
+    <!--顶部信息栏-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/top_bar">
+
+        <!--顶部通知文字-->
+        <LinearLayout
+            android:id="@+id/linea_main_toptv"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/congratulation" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zhugewolong"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="即将升级！" />
+        </LinearLayout>
+
+        <!--用户头像-->
+        <ImageView
+            android:id="@+id/img_top_avater"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="48dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/avater1" />
+
+        <!--用户名-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="48dp"
+            android:text="诸葛卧龙"
+            style="@style/MyTxtStyle" />
+
+        <!--用户等级-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="48dp"
+            android:text="11"
+            style="@style/MyTxtStyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1200/4000"
+            android:textColor="@color/toptext"
+            android:layout_marginTop="46dp"
+            android:layout_marginLeft="280dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1760/2000"
+            android:textColor="@color/toptext"
+            android:layout_marginTop="71dp"
+            android:layout_marginLeft="280dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1760/2000"
+            android:textColor="@color/toptext"
+            android:layout_marginTop="71dp"
+            android:layout_marginLeft="120dp" />
+
+    </FrameLayout>
+
+    <!--内部切换fragment-->
+    <FrameLayout
+        android:id="@+id/fragmentContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+    <!--底部菜单栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/homeBtn"
+            style="@style/main_tab_bottom"
+            android:background="@drawable/btn_bottom_home" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/ngameBtn"
+            style="@style/main_tab_bottom"
+            android:background="@drawable/btn_bottom_game" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/friendBtn"
+            style="@style/main_tab_bottom"
+            android:background="@drawable/btn_bottom_friend" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/mallBtn"
+            style="@style/main_tab_bottom"
+            android:background="@drawable/btn_bottom_mall" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/settingBtn"
+            style="@style/main_tab_bottom"
+            android:background="@drawable/btn_bottom_setting" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+</LinearLayout>

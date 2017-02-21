@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_order"
+    android:paddingTop="100dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    tools:context=".ui.activity.ActivityOrderpage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--游戏信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/input_lv_bg"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/MyTxtSitting"
+                    android:background="@drawable/title_bg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:paddingLeft="6dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="7dp"
+                    android:text="游戏信息" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:textColor="@color/toptext"
+                        android:textStyle="bold"
+                        android:text="游戏名"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="15dip"
+                        android:textColor="@color/white"
+                        android:background="@drawable/camp_login_input_bg"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="赤壁之战" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:textColor="@color/toptext"
+                        android:textStyle="bold"
+                        android:text="人数"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="26dip"
+                        android:layout_marginRight="15dip"
+                        android:textColor="@color/white"
+                        android:background="@drawable/camp_login_input_bg"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="8/10人" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:textColor="@color/toptext"
+                        android:textStyle="bold"
+                        android:text="关卡"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="26dip"
+                        android:layout_marginRight="15dip"
+                        android:textColor="@color/white"
+                        android:background="@drawable/camp_login_input_bg"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="山地穿越——险象划渡——逃离迷宫" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--玩家信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:background="@drawable/input_lv_bg"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/MyTxtSitting"
+                    android:background="@drawable/title_bg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:paddingLeft="6dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="7dp"
+                    android:text="玩家信息" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:textColor="@color/toptext"
+                        android:textStyle="bold"
+                        android:text="姓名"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="26dip"
+                        android:layout_marginRight="15dip"
+                        android:textColor="@color/white"
+                        android:background="@drawable/camp_login_input_bg"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="徐XX" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:textColor="@color/toptext"
+                        android:textStyle="bold"
+                        android:text="邮箱"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="26dip"
+                        android:layout_marginRight="15dip"
+                        android:textColor="@color/white"
+                        android:background="@drawable/camp_login_input_bg"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="135*******@163.com" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:textColor="@color/toptext"
+                        android:textStyle="bold"
+                        android:text="电话"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="26dip"
+                        android:layout_marginRight="15dip"
+                        android:textColor="@color/white"
+                        android:background="@drawable/camp_login_input_bg"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="187XXXXXXXX" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:textColor="@color/toptext"
+                        android:textStyle="bold"
+                        android:text="地址"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="26dip"
+                        android:layout_marginRight="15dip"
+                        android:textColor="@color/white"
+                        android:background="@drawable/camp_login_input_bg"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="135*******@163.com" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:textColor="@color/toptext"
+                        android:textStyle="bold"
+                        android:text="性别"
+                        android:textSize="12sp" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="26dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:text="男"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:text="女" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!--组队类型-->
+                <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="15dip"-->
+                <!--android:layout_marginBottom="5dp">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/toptext"-->
+                <!--android:textStyle="bold"-->
+                <!--android:text="组队类型"-->
+                <!--android:textSize="12sp" />-->
+
+                <!--<RadioGroup-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_marginLeft="26dp">-->
+                <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:text="个人"/>-->
+                <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="25dp"-->
+                <!--android:text="部落"/>-->
+                <!--</RadioGroup>-->
+                <!--</LinearLayout>-->
+
+            </LinearLayout>
+
+            <!--预定按钮-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:background="@drawable/input_lv_bg">
+
+                <Button
+                    android:id="@+id/btn_yuding"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_01"
+                    android:text="预定" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

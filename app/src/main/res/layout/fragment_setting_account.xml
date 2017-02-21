@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.FragmentSetting_account">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadeScrollbars="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/shezhi_lv_bg">
+
+                <TextView
+                    android:id="@+id/titletxt1"
+                    style="@style/MyTxtSitting"
+                    android:text="@string/changeName" />
+
+                <TextView
+                    android:id="@+id/txt_Text1"
+                    style="@style/MyTxtSitting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titletxt1"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/needToChangeNmae" />
+
+                <TextView
+                    style="@style/MyTxtSitting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Text1"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/clickToChangeName" />
+
+                <Button
+                    style="@style/BtnStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_sitting_changename" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/shezhi_lv_bg">
+
+                <TextView
+                    android:id="@+id/titletxt2"
+                    style="@style/MyTxtSitting"
+                    android:text="更改密码" />
+
+                <TextView
+                    android:id="@+id/txt_Text2"
+                    style="@style/MyTxtSitting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titletxt2"
+                    android:layout_marginTop="15dp"
+                    android:text="点击【更改密码】" />
+
+                <Button
+                    style="@style/BtnStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_sitting_changepwd" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/shezhi_lv_bg">
+
+                <TextView
+                    android:id="@+id/titletxt3"
+                    style="@style/MyTxtSitting"
+                    android:text="切换账号" />
+
+                <TextView
+                    android:id="@+id/txt_Text3"
+                    style="@style/MyTxtSitting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titletxt3"
+                    android:layout_marginTop="15dp"
+                    android:text="退出当前账号" />
+
+                <Button
+                    android:id="@+id/exchangeAccount"
+                    style="@style/BtnStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_sitting_changeuser" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

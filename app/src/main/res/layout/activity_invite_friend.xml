@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rela_invite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_game"
+    tools:context=".ui.activity.ActivityInvite_friend">
+
+    <RelativeLayout
+        android:layout_width="600dp"
+        android:layout_height="380dp"
+        android:background="@drawable/bg_dialog2"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btn_invite_back"
+            android:layout_width="33dp"
+            android:layout_height="35dp"
+            android:background="@drawable/btn_dialog1_back"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView2
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="19sp"
+            android:textColor="@color/dialog_tv"
+            android:textStyle="bold"
+            android:text="@string/invite_friend" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:layout_marginLeft="80dp"
+            android:textColor="@color/dialog_tv"
+            android:text="@string/invite_friend_word" />
+
+        <RelativeLayout
+            android:layout_width="500dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center_vertical">
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="自动匹配"
+                android:background="@drawable/btn_dialog_bg_selector" />
+        </RelativeLayout>
+
+
+        <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView2
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="400dp"
+            android:layout_marginTop="60dp"
+            android:text="等待匹配:" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="470dp"
+            android:layout_marginTop="60dp"
+            android:textColor="@color/red"
+            android:text="3人" />
+
+        <LinearLayout
+            android:layout_width="520dp"
+            android:layout_height="230dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="95dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_dialog_in">
+
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_invite_avter1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="诸葛亮"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="135dp" />
+
+                <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView2
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Lv 2"
+                    android:layout_marginTop="160dp"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距离：1200米"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="190dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_invite_avter2">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="赵云"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="135dp" />
+
+                <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView2
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Lv 4"
+                    android:layout_marginTop="160dp"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距离：1200米"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="190dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_invite_avter3">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="诸葛亮"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="135dp" />
+
+                <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView2
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Lv 2"
+                    android:layout_marginTop="160dp"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距离：1200米"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="190dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_invite"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="440dp"
+            android:layout_marginTop="330dp"
+            android:text="邀请"
+            android:background="@drawable/btn_dialog_bg_selector" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

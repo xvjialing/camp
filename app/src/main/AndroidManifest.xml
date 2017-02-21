@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.xvjia.camp3">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序访问WiFi网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="deb2961686f63f38ad401599bd9c64ff" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name=".ui.activity.ActivityMain"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ActivityGame_place1_step1"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.ActivityGame_place2_step1"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.activity.ActivityGame_place3_step1"
+            android:screenOrientation="landscape" />
+        <activity android:name=".ui.activity.ActivityGame_place4_step1" />
+        <activity android:name=".ui.activity.ActivityGame_place5_step1" />
+        <activity android:name=".ui.activity.ActivityStartPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.ActivityLogin"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name=".ui.activity.ActivityRegister" />
+        <activity android:name=".ui.activity.ActivityGame_place1_step2" />
+        <activity
+            android:name=".ui.activity.ActivityCapture"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".ui.activity.ActivityGameMap1"
+            android:screenOrientation="landscape" />
+        <activity android:name=".ui.activity.ActivityNgame_place1_detail" />
+        <activity android:name=".ui.activity.ActivityAdd_camp" />
+        <activity
+            android:name=".ui.activity.ActivityGameBag"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.activity.ActivityGameTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.activity.ActivityGameShop"
+            android:screenOrientation="landscape" />
+        <activity android:name=".ui.activity.Activity_friend1_detail" />
+        <activity android:name=".ui.activity.Activity_rank1_detail" />
+        <activity
+            android:name=".ui.activity.ActivityGame_team"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity android:name=".ui.activity.ActivityGame_place2_step2" />
+        <activity android:name=".ui.activity.ActivityClan" />
+        <activity android:name=".ui.activity.ActivityHuodong" />
+        <activity android:name=".ui.activity.ActivityStrategy" />
+        <activity android:name=".ui.activity.ActivityRecord" />
+        <activity
+            android:name=".ui.activity.ActivityExplain"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.activity.ActivityLoading"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.activity.ActivityInvite_friend"
+            android:screenOrientation="landscape" />
+        <activity android:name=".ui.activity.ActivityOrderpage" />
+        <activity android:name=".ui.activity.ActivityHelp"></activity>
+    </application>
+
+</manifest>

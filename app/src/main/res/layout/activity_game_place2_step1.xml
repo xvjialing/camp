@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ActivityGame_place2_step1"
+    android:background="@drawable/bg_game">
+
+    <ImageView
+        android:id="@+id/GameBagImg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/game_bag_selector"
+        android:layout_below="@id/game_back"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp" />
+
+    <ImageView
+        android:id="@+id/GameTaskImg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/game_task_selector"
+        android:layout_below="@id/GameBagImg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/GameShopImg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/game_shop_selector"
+        android:layout_below="@id/GameTaskImg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

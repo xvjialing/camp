@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.xvjia.camp3.ui.activity.ActivityGame_team"
+    android:background="@drawable/bg_game">
+
+    <RelativeLayout
+        android:layout_width="600dp"
+        android:layout_height="380dp"
+        android:background="@drawable/bg_dialog2"
+        android:layout_centerInParent="true">
+
+        <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView2
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teamReady"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/dialog_tv"
+            android:textStyle="bold"
+            android:textSize="19sp" />
+
+        <Button
+            android:id="@+id/btn_bag_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/btn_dialog1_back"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:orientation="vertical"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="战斗力：3000"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/dialog_tv"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+
+                <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView
+                    android:id="@+id/tv_teamMenberState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teamNumber"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/dialog_tv"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TEAM"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="25sp" />
+
+                <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的队伍"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="90dp"
+                    android:textColor="@color/toptext"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+
+                <!--倒计时-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="倒计时:00:"
+                        android:textSize="18sp"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/tv_cut_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05"
+                        android:textSize="18sp"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_invite_freind"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_01"
+                    android:text="邀请队友"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_dialog_in">
+
+                <LinearLayout
+                    android:id="@+id/linea1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/avater1"
+                        android:layout_gravity="center_horizontal"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="#ce7a4c" />
+
+                    <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="褪色的记忆"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linea2"
+                    android:layout_toRightOf="@id/linea1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/avater2"
+                        android:layout_gravity="center_horizontal"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="#ce7a4c" />
+
+                    <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="avnaokdna"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linea3"
+                    android:layout_toRightOf="@id/linea2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/avater3"
+                        android:layout_gravity="center_horizontal"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="#ce7a4c" />
+
+                    <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="vasdra"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linea4"
+                    android:layout_toRightOf="@id/linea3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/avater4"
+                        android:layout_gravity="center_horizontal"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="#ce7a4c" />
+
+                    <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="vasdra"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linea5"
+                    android:layout_toRightOf="@id/linea4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="invisible"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/avater9"
+                        android:layout_gravity="center_horizontal"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="#ce7a4c" />
+
+                    <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="vasdra"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_add_avater"
+                    android:layout_toRightOf="@id/linea4"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/btn_addpics"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_gameStart"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_02"
+                android:text="开始游戏"
+                android:textColor="@color/dialog_tv"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

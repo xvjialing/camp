@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.FragmentNgame"
+    android:layout_marginTop="5dp">
+
+    <RadioGroup
+        android:id="@+id/yingdiRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/means_bg"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/btn_ngame_recommend"
+            style="@style/means_button"
+            android:gravity="center"
+
+            android:checked="true"
+            android:text="@string/recommendGame"
+            android:textColor="#ffd407"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/btn_ngame_mine"
+            style="@style/means_button"
+            android:gravity="center"
+            android:text="@string/eGame"
+            android:textColor="#ffd407"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/btn_ngame_search"
+            style="@style/means_button"
+            android:gravity="center"
+            android:text="@string/searchGame"
+            android:textColor="#ffd407"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/yingdi_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+</LinearLayout>

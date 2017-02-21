@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.FragmentSetting_set">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/shezhi_lv_bg">
+
+                <TextView
+                    android:id="@+id/titletxt1"
+                    style="@style/MyTxtSitting"
+                    android:text="@string/versionUpdate" />
+
+                <TextView
+                    android:id="@+id/txt_Text1"
+                    style="@style/MyTxtSitting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titletxt1"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/recentVersion" />
+
+                <TextView
+                    style="@style/MyTxtSitting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Text1"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/alreadyNewestVersion" />
+
+                <Button
+                    android:id="@+id/btn_update"
+                    style="@style/BtnStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_sitting_update" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/shezhi_lv_bg">
+
+                <TextView
+                    android:id="@+id/titletxt2"
+                    style="@style/MyTxtSitting"
+                    android:text="@string/microblogBinlding" />
+
+                <TextView
+                    android:id="@+id/txt_Text2"
+                    style="@style/MyTxtSitting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titletxt2"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/notMicroblogBilding" />
+
+                <Button
+                    style="@style/BtnStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_sitting_golink" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/shezhi_lv_bg">
+
+                <TextView
+                    android:id="@+id/titletxt3"
+                    style="@style/MyTxtSitting"
+                    android:text="@string/customerCenter" />
+
+                <TextView
+                    android:id="@+id/txt_Text3"
+                    style="@style/MyTxtSitting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titletxt3"
+                    android:layout_marginTop="15dp"
+                    android:text="有任何疑问和建议" />
+
+                <TextView
+                    style="@style/MyTxtSitting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Text3"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/peleaseClickCustomerCenter" />
+
+                <Button
+                    style="@style/BtnStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_sitting_kefuzhongxin" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/shezhi_lv_bg">
+
+                <TextView
+                    android:id="@+id/titletxt4"
+                    style="@style/MyTxtSitting"
+                    android:text="关于我们" />
+
+                <TextView
+                    android:id="@+id/txt_Text4"
+                    style="@style/MyTxtSitting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titletxt4"
+                    android:layout_marginTop="15dp"
+                    android:text="想要了解我们" />
+
+                <TextView
+                    style="@style/MyTxtSitting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Text4"
+                    android:layout_marginTop="3dp"
+                    android:text="请点击【关于我们】" />
+
+                <Button
+                    style="@style/BtnStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_sitting_about" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

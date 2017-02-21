@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_clan"
+    tools:context="com.example.xvjia.camp3.ui.activity.ActivityClan">
+
+    <ImageView
+        android:id="@+id/img_clan_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/bg_gameback_selector" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="90dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rela_clantop"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/clan1" />
+
+                <LinearLayout
+                    android:layout_width="220dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_dialog_in2"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/onepeace"
+                        android:textColor="@color/yellow"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lv_1"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_jion_in"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:text="@string/join_in"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_01" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_claninfo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成员：20/25"
+                    android:textColor="@color/yellow"
+                    android:textSize="18sp"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="贡献：85"
+                    android:textColor="@color/yellow"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="部落等级：3"
+                    android:textColor="@color/yellow"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!--游戏邀请-->
+            <RelativeLayout
+                android:id="@+id/rela_clan_invite"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/input_lv_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/tv_clan_invite"
+                    style="@style/MyTxtSitting"
+                    android:background="@drawable/title_bg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="6dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/gameinvite" />
+
+                <LinearLayout
+                    android:layout_below="@id/tv_clan_invite"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battle_chibi"
+                        android:textSize="25sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4/5"
+                        android:textColor="@color/red"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp" />
+
+                    <Button
+                        android:id="@+id/btn_clan_invite"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_01"
+                        android:layout_marginLeft="120dp"
+                        android:text="@string/sign_up" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!--部落成员-->
+            <LinearLayout
+                android:id="@+id/rela_clan_menber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_lv_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/tv_clan_menber"
+                    style="@style/MyTxtSitting"
+                    android:background="@drawable/title_bg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="6dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/trible_menber" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_marginTop="5dp">
+
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="25sp"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/little_xv"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/avater1" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="25sp"
+                        android:text="@string/little_ming"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/avater2" />
+
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="60dp"
+                        android:layout_height="90dp"
+                        android:layout_marginRight="25sp"
+                        android:text="@string/little_zhang"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/avater3" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="20sp"
+                        android:text="@string/litttle_li"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/avater4" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="25sp"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/little_xv"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/avater5" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="25sp"
+                        android:text="@string/little_ming"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/avater6" />
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="60dp"
+                        android:layout_height="90dp"
+                        android:layout_marginRight="25sp"
+                        android:text="@string/little_zhang"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/avater7" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="20sp"
+                        android:text="@string/litttle_li"
+                        android:gravity="center"
+                        android:drawableTop="@drawable/avater8" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--部落分享-->
+            <LinearLayout
+                android:id="@+id/linea_fenxiang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_lv_bg"
+                android:visibility="gone"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="25dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titletxt8"
+                    style="@style/MyTxtSitting"
+                    android:background="@drawable/title_bg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:paddingLeft="6dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="15dp"
+                    android:text="游戏分享信息" />
+
+                <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView2
+                    android:text="@string/battle_chibi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="难度："
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4级"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关卡："
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="山地穿越——险象划渡——逃离迷宫"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="限定人数："
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8/10"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用时："
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1小时37分"
+                        android:textColor="@color/red" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="经验加成："
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+230"
+                        android:textColor="@color/red" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="体力："
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+13"
+                        android:textColor="@color/red" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="智力："
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+21"
+                        android:textColor="@color/red" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="合作值："
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+09"
+                        android:textColor="@color/red" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/maprela"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gamemap"
+    tools:context=".ui.activity.ActivityGameMap1">
+
+    <ImageView
+        android:id="@+id/maptag1"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="197dp"
+        android:layout_marginLeft="205dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/gamemap_tag_selector" />
+
+    <ImageView
+        android:id="@+id/map_avater1"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="210dp"
+        android:src="@drawable/map_avater" />
+
+
+    <ImageView
+        android:id="@+id/maptag2"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="265dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/gamemap_tag_selector" />
+
+    <ImageView
+        android:id="@+id/map_avater2"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="265dp"
+        android:visibility="invisible"
+        android:src="@drawable/map_avater" />
+
+    <ImageView
+        android:id="@+id/maptag3"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="187dp"
+        android:layout_marginLeft="297dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/gamemap_tag_selector" />
+
+    <ImageView
+        android:id="@+id/map_avater3"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="300dp"
+        android:visibility="invisible"
+        android:src="@drawable/map_avater" />
+
+    <ImageView
+        android:id="@+id/maptag4"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginLeft="280dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/gamemap_tag_selector" />
+
+    <ImageView
+        android:id="@+id/map_avater4"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="280dp"
+        android:visibility="invisible"
+        android:src="@drawable/map_avater" />
+
+    <ImageView
+        android:id="@+id/maptag5"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginLeft="365dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/gamemap_tag_selector" />
+
+    <ImageView
+        android:id="@+id/map_avater5"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="365dp"
+        android:visibility="invisible"
+        android:src="@drawable/map_avater" />
+
+    <ImageView
+        android:id="@+id/map_avater6"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="435dp"
+        android:visibility="invisible"
+        android:src="@drawable/map_avater" />
+
+    <ImageView
+        android:id="@+id/game_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bg_gameback_selector" />
+
+    <ImageView
+        android:id="@+id/GameBagImg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/game_bag_selector"
+        android:layout_below="@id/game_back"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp" />
+
+    <ImageView
+        android:id="@+id/GameTaskImg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/game_task_selector"
+        android:layout_below="@id/GameBagImg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/GameShopImg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/game_shop_selector"
+        android:layout_below="@id/GameTaskImg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
+
+
+    <ImageView
+        android:id="@+id/img_shout"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/shout" />
+
+
+</RelativeLayout>

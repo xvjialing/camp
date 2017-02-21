@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_game"
+    tools:context=".ui.activity.ActivityGameTask">
+
+    <RelativeLayout
+        android:layout_width="550dp"
+        android:layout_height="350dp"
+        android:background="@drawable/bg_dialog3"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/task_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/btn_dialog1_back" />
+
+        <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/task"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/dialog_tv"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/task_tagList"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_taskmain"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_dialog_bg_selector"
+                android:text="主线任务"
+                android:textColor="@color/dialog_tv"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_taskfeeder"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_dialog_bg_selector"
+                android:text="支线任务"
+                android:textColor="@color/dialog_tv"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_taskgrow"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_dialog_bg_selector"
+                android:text="成长任务"
+                android:textColor="@color/dialog_tv"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_taskdialy"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_dialog_bg_selector"
+                android:text="每日任务"
+                android:textColor="@color/dialog_tv"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/task_content"
+            android:layout_width="330dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/task_tagList"></FrameLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

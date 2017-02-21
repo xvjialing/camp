@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.FragmentNgame_search">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadeScrollbars="false"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/shezhi_lv_bg">
+
+                <TextView
+                    android:id="@+id/titletxt1"
+                    style="@style/MyTxtSitting"
+                    android:text="@string/searchGame" />
+
+                <EditText
+                    android:id="@+id/edt_campname"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/titletxt1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="搜索更多游戏"
+                    android:maxLength="20"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="#444444"
+                    android:textSize="12sp"
+                    android:focusable="true" />
+
+                <Button
+                    android:id="@+id/btn_search"
+                    style="@style/BtnStyle"
+                    android:layout_alignBaseline="@id/edt_campname"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/btn_search" />
+            </RelativeLayout>
+
+            <!--搜索提示-->
+            <RelativeLayout
+                android:id="@+id/yingdi_qiuck_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/qiuck_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#f4874c">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="热门"
+                        android:paddingLeft="15dp"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/qiuck_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/quick_tv1"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radius_rectangle"
+                        android:textColor="#ff0000"
+                        android:text="冒险" />
+
+                    <TextView
+                        android:id="@+id/quick_tv2"
+                        android:layout_toRightOf="@id/quick_tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/radius_rectangle"
+                        android:text="力量型" />
+
+                    <TextView
+                        android:id="@+id/quick_tv3"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/quick_tv2"
+                        android:background="@drawable/radius_rectangle"
+                        android:text="智力型" />
+
+                    <TextView
+                        android:id="@+id/quick_tv4"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/quick_tv3"
+                        android:background="@drawable/radius_rectangle"
+                        android:text="湖畔露营" />
+
+
+                    <TextView
+                        android:id="@+id/quick_tv5"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/quick_tv1"
+                        android:background="@drawable/radius_rectangle"
+                        android:text="古镇风情" />
+
+                    <TextView
+                        android:id="@+id/quick_tv6"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/quick_tv5"
+                        android:background="@drawable/radius_rectangle"
+                        android:layout_below="@id/quick_tv1"
+                        android:text="湖畔露营" />
+
+                    <TextView
+                        android:id="@+id/quick_tv7"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/quick_tv6"
+                        android:background="@drawable/radius_rectangle"
+                        android:layout_below="@id/quick_tv1"
+                        android:text="刺激" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
