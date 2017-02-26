@@ -65,8 +65,8 @@ public class ActivityRegister extends AppCompatActivity {
                         Map<String, String> params = new HashMap<String, String>();
                         params.put("user", str_username);
                         params.put("pwd", str_password);
-                        RequestUtils requestUtils = new RequestUtils(params, url);
-                        requestUtils.request().subscribeOn(Schedulers.io())
+                        RequestUtils requestUtils = new RequestUtils();
+                        requestUtils.request(params, url).subscribeOn(Schedulers.io())
                                 .observeOn(AndroidSchedulers.mainThread())
                                 .subscribe(new Subscriber<String>() {
                                     @Override

@@ -1,8 +1,7 @@
 package com.example.xvjia.camp3.utils;
 
-import android.util.Log;
-
 import com.example.xvjia.camp3.decode.UnicodeDecode;
+import com.orhanobut.logger.Logger;
 
 import java.io.IOException;
 import java.util.Map;
@@ -22,8 +21,6 @@ import rx.Subscriber;
  */
 
 public class RequestUtils {
-
-    private static final String TAG = RequestUtils.class.getSimpleName();
     private OkHttpClient client;
     private Map<String, String> params;
     private String url;
@@ -42,7 +39,7 @@ public class RequestUtils {
                     FormBody.Builder builder = new FormBody.Builder();
                     if (params != null && !params.isEmpty()) {
                         for (Map.Entry<String, String> entry : params.entrySet()) {
-                            Log.d(TAG, entry.getKey() + entry.getValue() + "");
+                            Logger.d(entry.getKey() + ":" + entry.getValue());
                             builder.add(entry.getKey(), entry.getValue());
                         }
                     }

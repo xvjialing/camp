@@ -20,6 +20,7 @@ import com.example.xvjia.camp3.R;
 import com.example.xvjia.camp3.bean.LoginBean;
 import com.example.xvjia.camp3.utils.RequestUtils;
 import com.example.xvjia.camp3.utils.SharedPreferencesUtils;
+import com.orhanobut.logger.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -68,8 +69,8 @@ public class ActivityLogin extends Activity {
                     Map<String, String> map = new HashMap<String, String>();
                     map.put("user", name);
                     map.put("pwd", password);
-                    RequestUtils requestUtils = new RequestUtils(map, url_login);
-                    requestUtils.request().subscribeOn(Schedulers.io())
+                    RequestUtils requestUtils = new RequestUtils();
+                    requestUtils.request(map, url_login).subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe(new Subscriber<String>() {
                                 @Override
@@ -85,14 +86,14 @@ public class ActivityLogin extends Activity {
 
                                 @Override
                                 public void onNext(String s) {
-                                    Log.d(TAG, s);
+                                    Logger.json(s);
 
                                     LoginBean loginBean = JSON.parseObject(s, LoginBean.class);
                                     if (TextUtils.equals(String.valueOf(loginBean.getLp()), "1")) {
                                         Toast.makeText(ActivityLogin.this, loginBean.getData().getMsg().toString(), Toast.LENGTH_SHORT).show();
                                     } else {
                                         String id = loginBean.getData().getList().get(0).getId();
-                                        Log.d(TAG, id);
+                                        Logger.d(id);
                                         SharedPreferencesUtils.setParam(ActivityLogin.this, "userid", id);
                                         startActivity(new Intent(ActivityLogin.this, ActivityMain.class));
                                         finish();

@@ -18,6 +18,7 @@ import com.example.xvjia.camp3.bean.GameBean;
 import com.example.xvjia.camp3.ui.activity.ActivityNgame_place1_detail;
 import com.example.xvjia.camp3.utils.RequestUtils;
 import com.example.xvjia.camp3.utils.UrlUtils;
+import com.orhanobut.logger.Logger;
 
 import java.util.HashMap;
 import java.util.List;
@@ -66,7 +67,7 @@ public class FragmentNgame_recommend extends Fragment {
                                 if (swipeRefreshLayout.isRefreshing()) {
                                     swipeRefreshLayout.setRefreshing(false);
                                 }
-                                Log.d(TAG, "RefreshCompelete");
+                                Logger.d("RefreshCompelete");
                             }
 
                             @Override
@@ -74,12 +75,12 @@ public class FragmentNgame_recommend extends Fragment {
                                 if (swipeRefreshLayout.isRefreshing()) {
                                     swipeRefreshLayout.setRefreshing(false);
                                 }
-                                Log.d(TAG, e.getMessage());
+                                Logger.d(e.getMessage());
                             }
 
                             @Override
                             public void onNext(String s) {
-                                Log.d(TAG, s);
+                                Logger.json(s);
                                 gameList = JSON.parseArray(s, GameBean.class);
                                 Log.d(TAG, String.valueOf(gameList.size()));
                                 yingdiAdapter.notifyDataSetChanged();
@@ -107,12 +108,12 @@ public class FragmentNgame_recommend extends Fragment {
                         if (swipeRefreshLayout.isRefreshing()) {
                             swipeRefreshLayout.setRefreshing(false);
                         }
-                        Log.d(TAG, e.getMessage());
+                        Logger.d(e.getMessage());
                     }
 
                     @Override
                     public void onNext(String s) {
-                        Log.d(TAG, s);
+                        Logger.json(s);
                         gameList = JSON.parseArray(s, GameBean.class);
                         Log.d(TAG, String.valueOf(gameList.size()));
                         yingdiAdapter = new YingdiAdapter(getContext(), gameList);
