@@ -82,7 +82,7 @@ public class FragmentNgame_recommend extends Fragment {
                             public void onNext(String s) {
                                 Logger.json(s);
                                 gameList = JSON.parseArray(s, GameBean.class);
-                                Log.d(TAG, String.valueOf(gameList.size()));
+
                                 yingdiAdapter.notifyDataSetChanged();
                             }
                         });

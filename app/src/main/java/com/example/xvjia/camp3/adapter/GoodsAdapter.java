@@ -89,4 +89,6 @@ public class GoodsAdapter extends RecyclerView.Adapter<GoodsAdapter.MyViewHolder
             btn_details = (Button) itemView.findViewById(R.id.btn_goods);
         }
     }
+
+
 }

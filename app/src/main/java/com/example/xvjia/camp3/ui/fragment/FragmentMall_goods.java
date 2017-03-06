@@ -17,6 +17,7 @@ import com.example.xvjia.camp3.adapter.GoodsAdapter;
 import com.example.xvjia.camp3.bean.GoodsBean;
 import com.example.xvjia.camp3.utils.RequestUtils;
 import com.example.xvjia.camp3.utils.UrlUtils;
+import com.orhanobut.logger.Logger;
 
 import java.util.HashMap;
 import java.util.List;
@@ -78,14 +79,18 @@ public class FragmentMall_goods extends Fragment {
                                 if (swipeRefreshLayout.isRefreshing()) {
                                     swipeRefreshLayout.setRefreshing(false);
                                 }
-                                Log.d(TAG, e.getMessage());
+                                Logger.d(e.getMessage());
                             }
 
                             @Override
                             public void onNext(String s) {
-                                Log.d(TAG, s);
-                                goodsList = JSON.parseArray(s, GoodsBean.class);
-                                goodsAdapter.notifyDataSetChanged();
+                                Logger.json(s);
+                                int fromPosition = goodsList.size();
+                                List<GoodsBean> list = JSON.parseArray(s, GoodsBean.class);
+                                goodsList.addAll(list);
+                                int toPosition = goodsList.size() - 1;
+                                goodsAdapter.notifyItemRangeInserted(fromPosition, list.size());
+                                recyclerView.smoothScrollToPosition(goodsList.size());
                             }
                         });
             }
@@ -113,12 +118,12 @@ public class FragmentMall_goods extends Fragment {
                         if (swipeRefreshLayout.isRefreshing()) {
                             swipeRefreshLayout.setRefreshing(false);
                         }
-                        Log.d(TAG, e.getMessage());
+                        Logger.d(e.getMessage());
                     }
 
                     @Override
                     public void onNext(String s) {
-                        Log.d(TAG, s);
+                        Logger.json(s);
                         goodsList = JSON.parseArray(s, GoodsBean.class);
                         goodsAdapter = new GoodsAdapter(getContext(), goodsList);
                         goodsAdapter.setOnButtonCickListener(new GoodsAdapter.ButtonClickListener() {
@@ -128,6 +133,7 @@ public class FragmentMall_goods extends Fragment {
                             }
                         });
                         recyclerView.setAdapter(goodsAdapter);
+                        recyclerView.smoothScrollToPosition(0);
                     }
                 });
     }
@@ -136,7 +142,10 @@ public class FragmentMall_goods extends Fragment {
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeLayout);
         recyclerView = (RecyclerView) view.findViewById(R.id.rv_goodslist);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setAutoMeasureEnabled(true);
         recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.smoothScrollToPosition(0);
     }
 
 }

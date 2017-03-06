@@ -39,7 +39,7 @@ public class RequestUtils {
                     FormBody.Builder builder = new FormBody.Builder();
                     if (params != null && !params.isEmpty()) {
                         for (Map.Entry<String, String> entry : params.entrySet()) {
-                            Logger.d(entry.getKey() + ":" + entry.getValue());
+//                            Logger.d(entry.getKey() + ":" + entry.getValue());
                             builder.add(entry.getKey(), entry.getValue());
                         }
                     }

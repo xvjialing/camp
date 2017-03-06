@@ -13,7 +13,6 @@ import com.bumptech.glide.Glide;
 import com.example.xvjia.camp3.R;
 import com.example.xvjia.camp3.bean.FriendBean;
 import com.example.xvjia.camp3.utils.UrlUtils;
-import com.squareup.haha.trove.THash;
 
 import java.util.List;
 
