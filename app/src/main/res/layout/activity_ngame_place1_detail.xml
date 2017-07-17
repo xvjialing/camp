@@ -23,6 +23,7 @@
 
             <!--游戏名称-->
             <com.example.xvjia.camp3.assetsFile.font.CustomFontTextView2
+                android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/battle_chibi"
@@ -67,6 +68,7 @@
                         android:textSize="15sp" />
 
                     <TextView
+                        android:id="@+id/tv_rank"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4级"
@@ -107,6 +109,7 @@
                         android:textSize="15sp" />
 
                     <TextView
+                        android:id="@+id/tv_menber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4/5"
@@ -139,7 +142,7 @@
 
 
                 <TextView
-                    android:id="@+id/game_translate"
+                    android:id="@+id/tv_translate"
                     android:layout_below="@id/titletxt6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -603,7 +606,7 @@
                     android:paddingLeft="10dip">
 
                     <ImageView
-                        android:id="@+id/place1_detail_img1"
+                        android:id="@+id/iv_place"
                         android:layout_width="350dp"
                         android:layout_height="200dp"
                         android:src="@drawable/place1_detail_img1" />

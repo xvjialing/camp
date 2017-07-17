@@ -38,7 +38,7 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/login_input_bg"
                 android:paddingLeft="4dp"
-                android:text="admin"
+                android:text="agent2"
                 android:inputType="text"
                 android:textColor="@color/white" />
         </LinearLayout>
@@ -67,7 +67,7 @@
                 android:background="@drawable/login_input_bg"
                 android:inputType="textPassword"
                 android:paddingLeft="4dp"
-                android:text="admin"
+                android:text="agent2"
                 android:textColor="@color/white" />
         </LinearLayout>
 

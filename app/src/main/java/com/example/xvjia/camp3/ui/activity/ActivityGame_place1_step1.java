@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -11,6 +12,7 @@ import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,11 +29,22 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClient;
+import com.amap.api.location.AMapLocationClientOption;
+import com.amap.api.location.AMapLocationListener;
+import com.amap.api.maps2d.AMap;
+import com.amap.api.maps2d.CameraUpdateFactory;
+import com.amap.api.maps2d.LocationSource;
 import com.amap.api.maps2d.MapView;
+import com.amap.api.maps2d.model.BitmapDescriptorFactory;
+import com.amap.api.maps2d.model.LatLng;
+import com.amap.api.maps2d.model.Marker;
+import com.amap.api.maps2d.model.MarkerOptions;
 import com.example.xvjia.camp3.MyApplication;
 import com.example.xvjia.camp3.R;
 
-public class ActivityGame_place1_step1 extends Activity {
+public class ActivityGame_place1_step1 extends Activity implements LocationSource, AMapLocationListener {
 
     private Button qrcodeBtn;
     private PopupWindow popupWindow_message_left;
@@ -48,6 +61,11 @@ public class ActivityGame_place1_step1 extends Activity {
     //弹窗1标签
     private int a = 1;
     private MapView mapView;
+    private AMap aMap;
+    private Marker marker1;
+    private LocationSource.OnLocationChangedListener mListener;
+    private AMapLocationClient mLocationClient;
+    private AMapLocationClientOption mLocationOption;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,31 +78,47 @@ public class ActivityGame_place1_step1 extends Activity {
         initview();
         mapView.onCreate(savedInstanceState);
 
+        initMap();
+
         initListener();
 
-        initAnim();
+//        initAnim();
 
         initCutTime();
         countDownTimer.start();
     }
 
-    private void initAnim() {
-        ScaleAnimation scaleAnimation = new ScaleAnimation(1.0f, 1.1f, 1.0f, 1.1f,
-                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        LinearInterpolator lir = new LinearInterpolator();
-        scaleAnimation.setInterpolator(lir);
-        scaleAnimation.setDuration(300);
-        scaleAnimation.setRepeatMode(Animation.REVERSE);
-        scaleAnimation.setRepeatCount(Animation.INFINITE);
-        img_help.setAnimation(scaleAnimation);
-
-
-        TranslateAnimation alphaAnimation = new TranslateAnimation(-10f, -10f, -15, -5);
-        alphaAnimation.setDuration(300);
-        alphaAnimation.setRepeatCount(Animation.INFINITE);
-        alphaAnimation.setRepeatMode(Animation.REVERSE);
-        img_avater.setAnimation(alphaAnimation);
+    private void initMap() {
+        if (aMap==null){
+            aMap=mapView.getMap();
+        }
+        aMap.moveCamera(CameraUpdateFactory.zoomTo(15));
+        setUpMap();
     }
+
+    private void setUpMap() {
+        aMap.setLocationSource(this);// 设置定位监听
+        aMap.getUiSettings().setMyLocationButtonEnabled(true);// 设置默认定位按钮是否显示
+        aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
+    }
+
+//    private void initAnim() {
+//        ScaleAnimation scaleAnimation = new ScaleAnimation(1.0f, 1.1f, 1.0f, 1.1f,
+//                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+//        LinearInterpolator lir = new LinearInterpolator();
+//        scaleAnimation.setInterpolator(lir);
+//        scaleAnimation.setDuration(300);
+//        scaleAnimation.setRepeatMode(Animation.REVERSE);
+//        scaleAnimation.setRepeatCount(Animation.INFINITE);
+//        img_help.setAnimation(scaleAnimation);
+//
+//
+//        TranslateAnimation alphaAnimation = new TranslateAnimation(-10f, -10f, -15, -5);
+//        alphaAnimation.setDuration(300);
+//        alphaAnimation.setRepeatCount(Animation.INFINITE);
+//        alphaAnimation.setRepeatMode(Animation.REVERSE);
+//        img_avater.setAnimation(alphaAnimation);
+//    }
 
     @Override
     protected void onStart() {
@@ -171,7 +205,7 @@ public class ActivityGame_place1_step1 extends Activity {
 
         textView_cutTime = (TextView) findViewById(R.id.tv_cutTime2);
 
-        img_avater = (ImageView) findViewById(R.id.smallmapAvater);
+//        img_avater = (ImageView) findViewById(R.id.smallmapAvater);
 
         mapView = (MapView) findViewById(R.id.mapView);
 
@@ -307,11 +341,69 @@ public class ActivityGame_place1_step1 extends Activity {
     protected void onPause() {
         super.onPause();
         mapView.onPause();
+        deactivate();
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         mapView.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void activate(OnLocationChangedListener onLocationChangedListener) {
+        mListener = onLocationChangedListener;
+        if (mLocationClient == null) {
+            mLocationClient = new AMapLocationClient(this);
+            mLocationOption = new AMapLocationClientOption();
+            //设置定位监听
+            mLocationClient.setLocationListener(this);
+            //设置为高精度模式
+            mLocationOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);
+            //设置定位参数
+            mLocationClient.setLocationOption(mLocationOption);
+            // 此方法为每隔固定时间会发起一次定位请求，为了减少电量消耗或网络流量消耗，
+            // 注意设置合适的定位时间的间隔（最小间隔支持为2000ms），并且在合适时间调用stopLocation()方法来取消定位请求
+            // 在定位结束后，在合适的生命周期调用onDestroy()方法
+            // 在单次定位情况下，定位无论成功与否，都无需调用stopLocation()方法移除请求，定位sdk内部会移除
+            mLocationClient.startLocation();
+
+        }
+    }
+
+    @Override
+    public void deactivate() {
+        mListener = null;
+        if (mLocationClient != null) {
+            mLocationClient.stopLocation();
+            mLocationClient.onDestroy();
+        }
+        mLocationClient = null;
+    }
+
+    @Override
+    public void onLocationChanged(AMapLocation aMapLocation) {
+        if (mListener != null && aMapLocation != null) {
+            if (aMapLocation != null
+                    && aMapLocation.getErrorCode() == 0) {
+                LatLng location = new LatLng(aMapLocation.getLatitude(),
+                        aMapLocation.getLongitude());
+                mListener.onLocationChanged(aMapLocation);// 显示系统小蓝点
+//                aMap.moveCamera(CameraUpdateFactory.zoomTo(20));
+                Log.d("---------xxxxyyyyyy----", location.longitude + "--------" + location.latitude);
+//                Log.d("distance", String.valueOf(AMapUtils.calculateLineDistance(location,new LatLng(30.2832558838,120.0184213784))));
+                if (marker1 != null) {
+                    marker1.remove();
+                }
+
+                marker1 = aMap.addMarker(new MarkerOptions().position(location).icon(BitmapDescriptorFactory
+                        .fromBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.user))));
+
+
+            } else {
+                String errText = "定位失败," + aMapLocation.getErrorCode() + ": " + aMapLocation.getErrorInfo();
+                Log.e("AmapErr", errText);
+            }
+        }
     }
 }

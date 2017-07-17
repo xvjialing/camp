@@ -53,6 +53,7 @@
 
         <!--用户名-->
         <TextView
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="85dp"
@@ -62,6 +63,7 @@
 
         <!--用户等级-->
         <TextView
+            android:id="@+id/tv_grade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="160dp"
@@ -70,6 +72,7 @@
             style="@style/MyTxtStyle" />
 
         <TextView
+            android:id="@+id/tv_power"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1200/4000"
@@ -78,6 +81,7 @@
             android:layout_marginLeft="280dp" />
 
         <TextView
+            android:id="@+id/tv_exp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1760/2000"
@@ -86,6 +90,7 @@
             android:layout_marginLeft="280dp" />
 
         <TextView
+            android:id="@+id/tv_gold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1760/2000"

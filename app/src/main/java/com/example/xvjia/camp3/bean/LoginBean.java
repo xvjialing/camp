@@ -1,15 +1,14 @@
 package com.example.xvjia.camp3.bean;
 
-import java.util.List;
-
 /**
  * Created by xjl on 2017/1/15.
  */
 
 public class LoginBean {
+
     /**
      * lp : 0
-     * data : {"msg":"请求成功","list":[{"id":"2","username":"xjl","password":"123","type":"1"}]}
+     * data : {"msg":"登陆成功","info":{"id":"10","username":"admin2","email":"1359296867@qq.com","phone":"18768379083"}}
      */
 
     private int lp;
@@ -33,12 +32,12 @@ public class LoginBean {
 
     public static class DataBean {
         /**
-         * msg : 请求成功
-         * list : [{"id":"2","username":"xjl","password":"123","type":"1"}]
+         * msg : 登陆成功
+         * info : {"id":"10","username":"admin2","email":"1359296867@qq.com","phone":"18768379083"}
          */
 
         private String msg;
-        private List<ListBean> list;
+        private InfoBean info;
 
         public String getMsg() {
             return msg;
@@ -48,26 +47,26 @@ public class LoginBean {
             this.msg = msg;
         }
 
-        public List<ListBean> getList() {
-            return list;
+        public InfoBean getInfo() {
+            return info;
         }
 
-        public void setList(List<ListBean> list) {
-            this.list = list;
+        public void setInfo(InfoBean info) {
+            this.info = info;
         }
 
-        public static class ListBean {
+        public static class InfoBean {
             /**
-             * id : 2
-             * username : xjl
-             * password : 123
-             * type : 1
+             * id : 10
+             * username : admin2
+             * email : 1359296867@qq.com
+             * phone : 18768379083
              */
 
             private String id;
             private String username;
-            private String password;
-            private String type;
+            private String email;
+            private String phone;
 
             public String getId() {
                 return id;
@@ -85,20 +84,20 @@ public class LoginBean {
                 this.username = username;
             }
 
-            public String getPassword() {
-                return password;
+            public String getEmail() {
+                return email;
             }
 
-            public void setPassword(String password) {
-                this.password = password;
+            public void setEmail(String email) {
+                this.email = email;
             }
 
-            public String getType() {
-                return type;
+            public String getPhone() {
+                return phone;
             }
 
-            public void setType(String type) {
-                this.type = type;
+            public void setPhone(String phone) {
+                this.phone = phone;
             }
         }
     }

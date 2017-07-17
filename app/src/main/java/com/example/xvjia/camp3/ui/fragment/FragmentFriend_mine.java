@@ -133,6 +133,7 @@ public class FragmentFriend_mine extends Fragment {
                             @Override
                             public void ButtonCick(RecyclerView parent, View view, int position, FriendBean friendBean) {
                                 Intent intent = new Intent(getContext(), Activity_friend1_detail.class);
+                                intent.putExtra("friend",friendBean);
                                 startActivity(intent);
                             }
                         });

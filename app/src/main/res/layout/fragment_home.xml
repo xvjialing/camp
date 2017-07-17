@@ -258,6 +258,7 @@
                     android:layout_centerVertical="true" />
 
                 <TextView
+                    android:id="@+id/tv_physical_damage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="80dp"
@@ -281,6 +282,7 @@
                     android:layout_centerVertical="true" />
 
                 <TextView
+                    android:id="@+id/tv_physical_defense"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="71dp"
@@ -309,6 +311,7 @@
                     android:layout_centerVertical="true" />
 
                 <TextView
+                    android:id="@+id/tv_spell_damage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="80dp"
@@ -332,6 +335,7 @@
                     android:layout_centerVertical="true" />
 
                 <TextView
+                    android:id="@+id/tv_spell_defense"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="80dp"
@@ -360,6 +364,7 @@
                     android:layout_centerVertical="true" />
 
                 <TextView
+                    android:id="@+id/tv_speed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="80dp"
@@ -383,6 +388,7 @@
                     android:layout_centerVertical="true" />
 
                 <TextView
+                    android:id="@+id/tv_treatment_intensity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="80dp"

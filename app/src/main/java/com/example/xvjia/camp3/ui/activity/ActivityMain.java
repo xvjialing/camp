@@ -5,6 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -14,14 +16,29 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
+import com.bumptech.glide.Glide;
+import com.example.xvjia.camp3.bean.LoginBean;
+import com.example.xvjia.camp3.bean.UserInfoBean;
 import com.example.xvjia.camp3.ui.fragment.FragmentFriend;
 import com.example.xvjia.camp3.ui.fragment.FragmentHome;
 import com.example.xvjia.camp3.ui.fragment.FragmentMall;
 import com.example.xvjia.camp3.ui.fragment.FragmentSetting;
 import com.example.xvjia.camp3.ui.fragment.FragmentNgame;
 import com.example.xvjia.camp3.R;
+import com.example.xvjia.camp3.utils.RequestUtils;
+import com.example.xvjia.camp3.utils.SharedPreferencesUtils;
+import com.example.xvjia.camp3.utils.UrlUtils;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 public class ActivityMain extends AppCompatActivity implements View.OnClickListener {
 
@@ -45,14 +62,26 @@ public class ActivityMain extends AppCompatActivity implements View.OnClickListe
 
     //主页菜单标记
     private String mainFragTag = "0";
+    private String userid;
+
+    private static final String URL_WATCHINFO= UrlUtils.Url+"watchInfo";
+    private static final String TAG=ActivityMain.class.getSimpleName();
+    private TextView tv_name;
+    private TextView tv_grade;
+    private TextView tv_power;
+    private TextView tv_gold;
+    private TextView tv_exp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         fragmentManager = this.getSupportFragmentManager();
         setContentView(R.layout.activity_main);
+        userid= SharedPreferencesUtils.getParam(ActivityMain.this,"userid","").toString();
 
         initview();
+
+        initData();
 
         initListener();
 
@@ -61,6 +90,54 @@ public class ActivityMain extends AppCompatActivity implements View.OnClickListe
         //弹出登录奖励窗口
         DialogDialyLogin();
 
+    }
+
+    private void initData() {
+        final AlertDialog dialog=new AlertDialog.Builder(ActivityMain.this)
+                .setMessage("正在加载")
+                .show();
+        RequestUtils requestUtils=new RequestUtils();
+        Map<String,String> map=new HashMap<>();
+        map.put("id",userid);
+        requestUtils.request(map,URL_WATCHINFO)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<String>() {
+                    @Override
+                    public void onCompleted() {
+                        dialog.dismiss();
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        dialog.dismiss();
+                    }
+
+                    @Override
+                    public void onNext(String s) {
+                        Log.d(TAG,s);
+                        UserInfoBean userInfoBean= JSON.parseObject(s,UserInfoBean.class);
+                        if (TextUtils.equals("0",String.valueOf(userInfoBean.getLp()))){
+                            String name=userInfoBean.getData().get(0).getUsername();
+                            String blood=userInfoBean.getData().get(0).getUserBlood();
+                            String brain=userInfoBean.getData().get(0).getUserBrains();
+                            String exp=userInfoBean.getData().get(0).getUserExp();
+                            String grade=userInfoBean.getData().get(0).getUserGrade();
+                            String power=userInfoBean.getData().get(0).getUserPower();
+                            String gold=userInfoBean.getData().get(0).getUserGold();
+                            String userface=userInfoBean.getData().get(0).getUserFace();
+
+
+
+                            tv_name.setText(name);
+                            tv_grade.setText(grade);
+                            tv_power.setText(power);
+                            tv_gold.setText(gold);
+                            tv_exp.setText(exp);
+                            Glide.with(ActivityMain.this).load(UrlUtils.IMAGEBASE+userface).into(img_avater);
+                        }
+                    }
+                });
     }
 
     private void initAnimation() {
@@ -94,7 +171,11 @@ public class ActivityMain extends AppCompatActivity implements View.OnClickListe
         img_avater = (ImageView) findViewById(R.id.img_top_avater);
 
         linea_toptv = (LinearLayout) findViewById(R.id.linea_main_toptv);
-
+        tv_name = (TextView) findViewById(R.id.tv_name);
+        tv_grade = (TextView) findViewById(R.id.tv_grade);
+        tv_power = (TextView) findViewById(R.id.tv_power);
+        tv_gold = (TextView) findViewById(R.id.tv_gold);
+        tv_exp = (TextView) findViewById(R.id.tv_exp);
     }
 
     @Override

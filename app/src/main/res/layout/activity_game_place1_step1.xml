@@ -84,13 +84,13 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="130dp" />
 
-    <ImageView
-        android:id="@+id/smallmapAvater"
-        android:layout_width="40dp"
-        android:layout_height="70dp"
-        android:scaleType="fitCenter"
-        android:layout_marginTop="223dp"
-        android:layout_marginLeft="373dp"
-        android:src="@drawable/map_avater" />
+    <!--<ImageView-->
+        <!--android:id="@+id/smallmapAvater"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:scaleType="fitCenter"-->
+        <!--android:layout_marginTop="223dp"-->
+        <!--android:layout_marginLeft="373dp"-->
+        <!--android:src="@drawable/map_avater" />-->
 
 </RelativeLayout>

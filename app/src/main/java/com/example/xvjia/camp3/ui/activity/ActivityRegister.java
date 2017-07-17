@@ -39,6 +39,8 @@ public class ActivityRegister extends AppCompatActivity {
     private String str_username;
     private String str_password;
     private String str_checkPassword;
+    private EditText et_email;
+    private EditText et_phone;
 
 
     @Override
@@ -48,9 +50,13 @@ public class ActivityRegister extends AppCompatActivity {
         et_username = (EditText) findViewById(R.id.et_username);
         et_password = (EditText) findViewById(R.id.et_password);
         et_checkPassword = (EditText) findViewById(R.id.et_checkpassword);
+        et_email = (EditText) findViewById(R.id.et_email);
+        et_phone = (EditText) findViewById(R.id.et_phone);
 
         registerBtn = (Button) findViewById(R.id.RegisterBtn);
         registerBtn.setOnClickListener(new View.OnClickListener() {
+            private String str_phone;
+            private String str_email;
             private ProgressDialog progressDialog;
 
             @Override
@@ -59,12 +65,16 @@ public class ActivityRegister extends AppCompatActivity {
                 str_username = et_username.getText().toString().trim();
                 str_password = et_password.getText().toString().trim();
                 str_checkPassword = et_checkPassword.getText().toString().trim();
+                str_email = et_email.getText().toString().trim();
+                str_phone = et_phone.getText().toString().trim();
 
                 if (!(str_username.isEmpty() && str_password.isEmpty() && str_checkPassword.isEmpty())) {
                     if (TextUtils.equals(str_password, str_checkPassword)) {
                         Map<String, String> params = new HashMap<String, String>();
                         params.put("user", str_username);
                         params.put("pwd", str_password);
+                        params.put("email", str_email);
+                        params.put("phone", str_phone);
                         RequestUtils requestUtils = new RequestUtils();
                         requestUtils.request(params, url).subscribeOn(Schedulers.io())
                                 .observeOn(AndroidSchedulers.mainThread())
@@ -89,7 +99,7 @@ public class ActivityRegister extends AppCompatActivity {
                                         } else {
                                             String id = String.valueOf(registerBean.getData().getList());
                                             SharedPreferencesUtils.setParam(ActivityRegister.this, "userid", id);
-                                            startActivity(new Intent(ActivityRegister.this, ActivityLogin.class));
+
                                             finish();
                                         }
                                     }

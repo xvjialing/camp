@@ -1,6 +1,7 @@
 package com.example.xvjia.camp3.ui.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -15,6 +16,7 @@ import com.alibaba.fastjson.JSON;
 import com.example.xvjia.camp3.R;
 import com.example.xvjia.camp3.adapter.GoodsAdapter;
 import com.example.xvjia.camp3.bean.GoodsBean;
+import com.example.xvjia.camp3.ui.activity.ActivityGoodsDetail;
 import com.example.xvjia.camp3.utils.RequestUtils;
 import com.example.xvjia.camp3.utils.UrlUtils;
 import com.orhanobut.logger.Logger;
@@ -129,7 +131,9 @@ public class FragmentMall_goods extends Fragment {
                         goodsAdapter.setOnButtonCickListener(new GoodsAdapter.ButtonClickListener() {
                             @Override
                             public void ButtonClick(RecyclerView parent, View view, int position, GoodsBean goodsBean) {
-
+                                Intent intent=new Intent(getContext(), ActivityGoodsDetail.class);
+                                intent.putExtra("good",goodsBean);
+                                startActivity(intent);
                             }
                         });
                         recyclerView.setAdapter(goodsAdapter);

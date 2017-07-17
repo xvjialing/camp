@@ -122,9 +122,7 @@ public class FragmentNgame_recommend extends Fragment {
                             public void buttonClick(RecyclerView parent, View view, int position, GameBean game) {
                                 Log.d(TAG, String.valueOf(position));
                                 Intent intent = new Intent(getContext(), ActivityNgame_place1_detail.class);
-                                Bundle bundle = new Bundle();
-                                bundle.putParcelable("game", game);
-                                intent.putExtras(bundle);
+                                intent.putExtra("game",game);
                                 startActivity(intent);
                             }
                         });
